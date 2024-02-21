@@ -1,38 +1,281 @@
 .App {
+  background-color: #316FF6;
+  height: 100vh;
+  padding-top: 5vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+.loginForm {
+  text-align: left;
+  vertical-align: middle;
+  padding: 50px;
+  padding-right: 65px;
+  line-height: 2;
+  min-width: 250px;
+  margin: auto;
+  max-width: 400px;
+  border: 2px solid grey;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px 1px grey;
+  background-color: white;
+}
+
+.toggleSignUp {
+  cursor: pointer;
+  color: #316FF6;
+}
+
+.loginFooter, .loginForm .header {
+  margin: auto;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.form-group input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 0.5px solid grey;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#remember {
+  display: inline;
+  width: 15px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.loginForm Button {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/*************************************** dashboard ***********************************************************/
+
+.dashboard {
+  display: flex;
+  width: 100vw;
+}
+
+/*************************************** navbar ***********************************************************/
+
+.dashboard .navbar {
+  background-color: #316FF6;
+  height: 100vh;
+  max-width: 75px;
+  min-width: 50px;
+  padding: 0 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .navItem {
+  margin: 20px auto;
+  cursor: pointer;
+}
+
+.navbar .navItem:hover {
+  background-color: white !important;
+}
+
+.dashboard .chatList {
+  background-color: white !important;
+  width: 350px;
+}
+
+.dashboard .conversations {
+  background-color: #eee;
+  width: 850px;
+  text-align: center;
+}
+
+.dashboard .profile {
+  background-color: #F0F8FF;
+  /* width: auto; */
+  width: 300px;
+  text-align: center;
+}
+
+.agentProfile .profilePic {
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+
+/**************************************************** chat list **********************************************/
+
+.chatList .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10px;
+  border-bottom: 2px solid #eee;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 10px;
+  border-bottom: 2px solid #eee;
+}
+
+.item .itemHeaders {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.itemHeaderLeft { 
+  display: flex;
+  justify-content: flex-start;
+}
+
+.itemHeaderLeft .itemSubHeaders {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 10px;
+}
+
+.header .subHeading{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header .subHeading h2 { 
+  margin-left: 10px !important;
+}
+
+.itemContent h4 {
+  margin: 0;
+}
+
+/******************************************************* conversations **************************************/
+
+.conversationsHeader {
+  display: flex;
+  justify-content: flex-start;
+  padding: 15px 10px;
+  background-color: white !important;
+  border: 2px solid #eee;
+  border-top: 0;
+}
+
+.paper {
+  background-color: white !important;
+  min-height: 20px !important;
+  max-width: 100%;
+  box-shadow: 0.6px 0.6px 0.6px 0.6px grey;
+  border-radius: 5px;
+  margin: 5px 0;
+  text-align: left;
+  padding: 10px;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.message {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.message .messageProfile {
+  margin-bottom: 30px;
+}
+
+.message .messageContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 10px;
+}
+
+.messageContent .messageInfo {
+  text-align: end;
+}
+
+
+.chatMessages {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 10px;
+  overflow: auto;
+  max-height: 77vh;
+}
+
+.sendMessage {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 10px;
+  align-items: center;
+  margin: auto;
+}
+.writeMessage {
+  max-width: 100%;
+  min-height: 25px;
+  padding: 5px;
+  border-radius: 10px;
+  border: 5px solid #eee;
+  min-width: 750px;
+  box-shadow: 1px 1px 1px 1px #eee;
 }
 
-.App-link {
-  color: #61dafb;
+.writeMsgBtn {
+  max-height: 35px;
+  max-width: 90px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/********************************************** profile ***************************************************************/
+
+.customerProfile {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 10px;
+  text-align: center;
+  background-color: white;
+  height: 30vh;
+  line-height: 2;
+}
+
+.customerProfile .profilePic {
+  margin: auto;
+}
+
+.customerProfile .profileActionBtns {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+}
+
+.customerDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 10px;
+  background-color: white;
+  border: 2px solid #eee;
+  max-width: 80%;
+  margin: auto;
+  margin-top: 20px;
+  text-align: left;
+  line-height: 2;
+}
+
+.customerDetails .details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.customerDetails .moreDetails {
+  color: #316FF6;
+  cursor: pointer;
 }
